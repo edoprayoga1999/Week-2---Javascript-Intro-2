@@ -86,7 +86,7 @@ substring() akan mengambil string pada posisi yang ditentukan lalu akan mereturn
 */
 console.log("9. Function substring()")
 const kalimat2 = "Ayo vaksin booster"
-const newKalimat2 = kalimat2.substring(4,11) // mengambil string dari range index 4 ke 11
+const newKalimat2 = kalimat2.substring(4,10) // mengambil string dari range index 4 ke 10
 console.log(newKalimat2)
 console.log("----------------------------------------------")
 /*
