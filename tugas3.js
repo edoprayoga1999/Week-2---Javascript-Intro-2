@@ -7,16 +7,16 @@ function check(arr) {
         return false
 }
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
-  if (typeof(nilaiAwal) != "number" || typeof(nilaiAkhir) != "number" || Array.isArray(dataArray) == false) {
+    if (typeof(nilaiAwal) != "number" || typeof(nilaiAkhir) != "number" || Array.isArray(dataArray) == false) {
         return "Format nilai awal dan akhir harus angka. Lalu data harus array"
-} else if (nilaiAwal > nilaiAkhir){
+    } else if (nilaiAwal > nilaiAkhir){
         return "Nilai akhir harus lebih besar dari nilai awal"
-} else if (dataArray.length < 5){
+    } else if (dataArray.length < 5){
         return "Jumlah elemen angka dalam dataArray harus lebih dari 5"
-} else if (check(dataArray) == true){
+    } else if (check(dataArray) == true){
         return "Terdapat data didalam array yang bukan number"
-} else {
-    const result = dataArray.filter(check => check > nilaiAwal && check < nilaiAkhir)
+    } else {
+    const result = dataArray.filter((check) => { return check > nilaiAwal && check < nilaiAkhir })
         if (result.length == 0){
             return "Nilai tidak ditemukan"
         } else {

@@ -9,17 +9,17 @@ const searchName = (str,lim,cb) => {
     } else if (lim < 0) {
         return "Parameter lim tidak boleh kurang dari 0"
     }
-    const filter = name.filter(el => el.toLowerCase().includes(str));
+    const filter = name.filter(el => el.toLowerCase().includes(str.toLowerCase()));
     return cb(filter,lim)
 }
 const printName = (a,b) => {
-    const limit = a.slice(0,b)
-    if (limit.length == 0){
+    if (a.length == 0){
         return "Data tidak ditemukan"
     } else {
+        const limit = a.slice(0,b)
         return limit
     }
 }
-const hasil = searchName("an",4,printName)
+const hasil = searchName("AN",4,printName)
 console.log(hasil)
 
